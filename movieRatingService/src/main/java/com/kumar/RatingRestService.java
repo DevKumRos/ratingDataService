@@ -18,8 +18,8 @@ public class RatingRestService {
     }
 
     @RequestMapping("/user/{userId}")
-    public UserRating getUserRatings(@PathVariable("userId") String userId) {
-        UserRating userRating = new UserRating();
+    public UserRating getUserRatings(@PathVariable("userId") String userId) throws InterruptedException {
+    	UserRating userRating = new UserRating();
         userRating.initData(userId);
         return userRating;
 
